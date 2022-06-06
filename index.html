@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>API Google Maps</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h3>My Google Maps</h3>
+		<div id="map"></div>
+	<style>
+		#map{
+			height: 500px;
+			width: 500px;
+		}
+	</style>
+	<script>
+		function initMap(){
+			//map options 
+			let options = {
+				zoom:10,
+				center:{lat:37.9577, lng:-121.2908}
+			}
+			/*
+			let map = new google.maps.Map(document.getElementById('map'), 'options');
+			//add marker
+			let marker = new google.maps.Marker({
+				position:{lat:37.9358,lng:-122.3477},	
+				map: map,
+				icon:''
+			});
+			//information Window popup
+			let infoWin = new google.maps.infoWin({
+				content:'<h1>Richmond Ca</h1>'
+			});
+
+			marker.addEventListener('click', function(){
+				infoWin.open(map,marker);
+			});
+		}; */
+		function addMarker(){
+			let marker = new google.maps.Marker({
+				position:coords,
+				map:map,
+				icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+			});
+		};
+	};
+
+
+	</script>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMAJt-Qz71YdiRGPkzb4seIvMgk5KPcv8&callback=initMap&libraries=&v=weekly" defer>
+
+	</script>	
+	</body>
+</html>
